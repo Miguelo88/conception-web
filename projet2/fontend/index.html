@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Réservation des Salles - Université</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome pour les icônes -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="header">
+  <div class="nav-links">
+    <a href="index.html">Accueil</a>
+    <a href="login.html">Se connecter</a>
+    <a href="register.html">Créer un compte</a>
+    <a href="voir reservation.html">Panier de réservation</a>
+  </div>
+
+  <div class="menu-voir">
+    <a href="#" class="lien-voir">Salle ▾</a>
+    <div class="menu-deroulant">
+     <a href="laboratoire.html">labo</a>
+      <a href="amphi.html">Amphi</a>
+     <a href="salle de cours.html">Salle de cours </a>
+       <a href="info.html">Salle multimedia </a>
+    </div>
+  </div>
+</nav>
+
+<!-- Vidéo de fond -->
+<video autoplay muted loop id="bg-video">
+  <source src="classe/v1.mp4" type="video/mp4">
+  Votre navigateur ne supporte pas la vidéo.
+</video>
+
+<!-- Présentation -->
+<section id="presentation1">
+  <h1>Bienvenue sur le portail de réservation</h1>
+  <p>Réservez vos salles de cours, séminaires et événements en quelques clics.</p>
+  <a href="reservation.html" class="button big">Commencer</a>
+</section>
+
+<!-- Pourquoi nous choisir -->
+<section id="why-us">
+  <div class="presentation2">
+    <h2>Pourquoi nous choisir ?</h2>
+    <div class="flex flex-3">
+
+      <div class="card">
+        <i class="fas fa-bolt fa-2x"></i>
+        <h3>Rapidité</h3>
+        <p>Plus besoin de chercher une salle libre au dernier moment : tout est centralisé et visible en ligne.</p>
+      </div>
+
+      <div class="card">
+        <i class="fas fa-mouse-pointer fa-2x"></i>
+        <h3>Simplicité</h3>
+        <p>La réservation se fait en quelques clics, sans passer par des démarches administratives longues.</p>
+      </div>
+
+      <div class="card">
+        <i class="fas fa-chalkboard fa-2x"></i>
+        <h3>Équipements adaptés</h3>
+        <p>Les salles peuvent être équipées (tableaux, projecteurs, Wi-Fi) pour favoriser l’efficacité collective.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Nos services -->
+<section id="services">
+  <div class="inner">
+    <h2>Nos services</h2>
+    <div class="flex flex-4">
+
+      <div class="card">
+        <i class="fas fa-calendar-check fa-2x"></i>
+        <h3>Suivi et flexibilité</h3>
+        <p>Tu peux gérer tes réservations, les modifier ou les annuler facilement.</p>
+      </div>
+
+      <div class="card">
+        <i class="fas fa-tasks fa-2x"></i>
+        <h3>Organisation optimale</h3>
+        <p>Planifie tes sessions de travail à l’avance et évite les imprévus.</p>
+      </div>
+
+      <div class="card">
+        <i class="fas fa-users fa-2x"></i>
+        <h3>Collaboration</h3>
+        <p>Travaillez ensemble dans des salles adaptées pour des projets et ateliers.</p>
+      </div>
+
+      <div class="card">
+        <i class="fas fa-lightbulb fa-2x"></i>
+        <h3>Inspiration</h3>
+        <p>Des espaces créatifs et lumineux pour stimuler la productivité et l’innovation.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Nos espaces (images) -->
+<section id="spaces">
+  <h2>Nos Espaces</h2>
+  <div class="flex flex-4">
+    <div class="space-card">
+      <img src="classe/p1.jpg" alt="Salle 1">
+      <h3>Salle de cours</h3>
+      <p>capacite moyenne</p>
+    </div>
+    <div class="space-card">
+      <img src="classe/p2.jpg" alt="Salle 2">
+      <h3>Salle 2</h3>
+       <p>suivez l'Exemple</p>
+    </div>
+    <div class="space-card">
+      <img src="classe/p3.jpg" alt="Salle 3">
+      <h3>salle multimedia</h3>
+    </div>
+    <div class="space-card">
+      <img src="classe/p4.jpg" alt="Salle 4">
+      <h3>Amphi</h3>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+
+</body>
+</html>

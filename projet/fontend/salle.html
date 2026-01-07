@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catalogue des Classes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="salle-menu">
+      <a href="#" class="salle-link">Salle</a>
+      <div class="salle-options">
+        <a href="salle1.html">Salle 1</a>
+        <a href="salle2.html">Salle 2</a>
+        <a href="salle3.html">Salle 3</a>
+      </div>
+    </div>
+
+    <a href="login.html">Se connecter</a>
+    <a href="register.html">Créer un compte</a>
+    <a href="voir-reservation.html">Panier de réservation</a>
+  </nav>
+
+  <!-- Catalogue -->
+  <div class="page-catalogue">
+    <h1 class="titre-page">Catalogue des Classes</h1>
+    <div class="catalogue">
+      <!-- Exemple de carte -->
+      <div class="classe-card">
+        <img src="images/classe1.jpg" alt="Classe A">
+        <h2>Classe A</h2>
+        <p>Grande salle équipée, capacité 80 étudiants.</p>
+        <button class="btn-reserver" data-classe="A">Réserver</button>
+      </div>
+
+      <div class="classe-card">
+        <img src="images/classe2.jpg" alt="Classe B">
+        <h2>Classe B</h2>
+        <p>Salle climatisée, idéale pour examens.</p>
+        <button class="btn-reserver" data-classe="B">Réserver</button>
+      </div>
+
+      <div class="classe-card">
+        <img src="images/classe3.jpg" alt="Classe C">
+        <h2>Classe C</h2>
+        <p>Salle multifonction avec projecteur.</p>
+        <button class="btn-reserver" data-classe="C">Réserver</button>
+      </div>
+
+      <!-- Ajoute les autres cartes de la même manière -->
+    </div>
+  </div>
+
+  <!-- Formulaire modal -->
+  <div id="reservationModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Formulaire de réservation</h2>
+      <form>
+        <label for="classe">Salle choisie :</label>
+        <input type="text" id="classe" name="classe" readonly>
+
+        <label for="nom">Votre nom :</label>
+        <input type="text" id="nom" name="nom" required>
+
+        <label for="email">Votre email :</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="date">Date de réservation :</label>
+        <input type="date" id="date" name="date" required>
+
+        <button type="submit">Valider la réservation</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const modal = document.getElementById("reservationModal");
+    const closeBtn = document.querySelector(".close");
+    const classeInput = document.getElementById("classe");
+
+    document.querySelectorAll(".btn-reserver").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const classe = btn.getAttribute("data-classe");
+        classeInput.value = "Classe " + classe;
+        modal.style.display = "block";
+      });
+    });
+
+    closeBtn.onclick = () => {
+      modal.style.display = "none";
+    };
+
+    window.onclick = (event) => {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    };
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+.panier-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #f8f8f8;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.panier-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.panier-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.panier-table th,
+.panier-table td {
+  padding: 12px 15px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.panier-table tr.en-attente {
+  background-color: #fff4e5; /* orange clair */
+}
+
+.panier-table tr.confirmé {
+  background-color: #e6f7e6; /* vert clair */
+}
+
+.panier-table th {
+  background-color: #f0f0f0;
+  font-weight: bold;
+}
+
+.btn-annuler {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-annuler:hover {
+  background-color: #c0392b;
+}

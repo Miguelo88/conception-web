@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang= »fr »>
+<head>
+ <meta charset= »UTF-8 »>
+ <meta name= »viewport » content= »width=device-width, initial-scale=1.0 »>
+ <title>Réservation</title>
+</head>
+<body>
+ <h2>Réserver la classe :</h2>
+ <script>
+ Const url = new URL(window.location.href) ;
+ Const classe = url.searchParams.get(« classe ») ;
+ Document.write(« <h3> » + classe + « </h3> ») ;
+ </script>
+ <form>
+ <label>Nom :</label>
+ <input type= »text »><br><br>
+ <label>Date :</label>
+ <input type= »date »><br><br>
+ <button>Valider la réservation</button>
+ </form>
+</body>
+</html>

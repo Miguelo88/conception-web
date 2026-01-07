@@ -1,0 +1,171 @@
+
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catalogue des Classes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body style="  background: radial-gradient(circle at top, #00ff66 0%, #001500 50%, #000000 100%);">
+
+   <!-- barre de navigation -->
+<nav class="header">
+
+  <!-- Groupe de liens normaux -->
+  <div class="nav-links">
+     <a href="index.html">acceuill</a>
+    <a href="login.html">Se connecter</a> 
+    <a href="register.html">Créer un compte</a> 
+    <a href="voir reservation.html">Panier de réservation</a>
+    
+  </div>
+
+  <!-- Menu Salle (inchangé dans son comportement) -->
+   <div class="menu-voir">
+    <a href="#" class="lien-voir">Salle ▾</a>
+
+    <div class="menu-deroulant">
+     <a href="laboratoire.html">labo</a>
+      <a href="amphi.html">Amphi</a>
+      <a href="salle de cours.html">Salle de cours </a>
+       <a href="info.html">Salle multimedia </a>
+    </div>
+  </div>
+
+
+</nav>
+
+  <!-- Catalogue -->
+ 
+
+ <div class="page-catalogue">
+    <h1 class="titre-page">Catalogue des Classes</h1>
+    <div class="catalogue">
+      <!-- Exemple de carte -->
+      <div class="classe-card">
+        <img src="classe/c1.jpg" alt="Classe A">
+        <h2>Classe A</h2>
+        <p>Grande salle équipée, capacité 80 étudiants.</p>
+        <button class="btn-reserver" data-classe="A">Réserver</button>
+      </div>
+
+      <div class="classe-card">
+        <img src="classe/c.jpg" alt="Classe B">
+        <h2>Classe B</h2>
+        <p>Salle climatisée, idéale pour examens.</p>
+        <button class="btn-reserver" data-classe="B">Réserver</button>
+      </div>
+
+      <div class="classe-card">
+        <img src="classe/c2.jpg" alt="Classe C">
+        <h2>Classe C</h2>
+        <p>Salle multifonction avec projecteur.</p>
+        <button class="btn-reserver" data-classe="C">Réserver</button>
+      </div>
+
+      
+      <div class="classe-card">
+        <img src="classe/c3.jpg" alt="Classe C">
+        <h2>Classe C</h2>
+        <p>Salle multifonction avec projecteur.</p>
+        <button class="btn-reserver" data-classe="C">Réserver</button>
+      </div>
+
+      
+      <div class="classe-card">
+        <img src="classe/c4.jpg" alt="Classe C">
+        <h2>Classe C</h2>
+        <p>Salle multifonction avec projecteur.</p>
+        <button class="btn-reserver" data-classe="C">Réserver</button>
+      </div>
+
+      
+      <div class="classe-card">
+        <img src="classe/c5.jpg" alt="Classe C">
+        <h2>Classe C</h2>
+        <p>Salle multifonction avec projecteur.</p>
+        <button class="btn-reserver" data-classe="C">Réserver</button>
+      </div>
+
+      
+      <div class="classe-card">
+        <img src="classe/c6.jpg" alt="Classe C">
+        <h2>Classe C</h2>
+        <p>Salle multifonction avec projecteur.</p>
+        <button class="btn-reserver" data-classe="C">Réserver</button>
+      </div>
+
+      
+      <div class="classe-card">
+        <img src="classe/c7.jpg" alt="Classe C">
+        <h2>Classe C</h2>
+        <p>Salle multifonction avec projecteur.</p>
+        <button class="btn-reserver" data-classe="C">Réserver</button>
+      </div>
+
+      
+      <div class="classe-card">
+        <img src="classe/s8.jpg" alt="Classe C">
+        <h2>Classe C</h2>
+        <p>Salle multifonction avec projecteur.</p>
+        <button class="btn-reserver" data-classe="C">Réserver</button>
+      </div>
+        <div class="classe-card">
+        <img src="classe/c9.jpg" alt="Classe C">
+        <h2>Classe C</h2>
+        <p>Salle multifonction avec projecteur.</p>
+        <button class="btn-reserver" data-classe="C">Réserver</button>
+      </div>
+     
+    </div>
+  </div>
+  <!-- Formulaire modal -->
+  <div id="reservationModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Formulaire de réservation</h2>
+      <form>
+        <label for="classe">Salle choisie :</label>
+        <input type="text" id="classe" name="classe" readonly>
+
+        <label for="nom">Votre nom :</label>
+        <input type="text" id="nom" name="nom" required>
+
+        <label for="email">Votre email :</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="date">Date de réservation :</label>
+        <input type="date" id="date" name="date" required>
+
+        <button type="submit">Valider la réservation</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const modal = document.getElementById("reservationModal");
+    const closeBtn = document.querySelector(".close");
+    const classeInput = document.getElementById("classe");
+
+    document.querySelectorAll(".btn-reserver").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const classe = btn.getAttribute("data-classe");
+        classeInput.value = "Classe " + classe;
+        modal.style.display = "block";
+      });
+    });
+
+    closeBtn.onclick = () => {
+      modal.style.display = "none";
+    };
+
+    window.onclick = (event) => {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    };
+  </script>
+
+</body>
+</html>      
+
